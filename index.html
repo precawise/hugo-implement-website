@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo site</title>
+    <link rel="stylesheet" href="hugo.css">
+    <link rel="stylesheet" href="hugo-responsive.css">
+    <!-- using fontawesome and bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
+</head>
+<body class="max sans-serif bg-primary-color-light production">
+    <section>
+         <nav class="bg-primary-color-dark para4 w-100" role="navigation">
+          
+            <div class="center flex-ms flex-wrap items-center justify-start mw9">
+                <h1 class="jim1 f3 1h-solid m10-ns mr0-1 p13 p14">
+                  <a href="https://gohugo.io/" class="link-white">HUGO</a>
+                </h1>
+              <ul class="list ma0 pa0 dn dib-1">
+                <li class="f5 dib mr4" role="menuitem">
+                    <a  class="dim link light-silver" href="/news/">News</a></li>
+                <li class="f5 dib mr4" role="menuitem">
+                  <a  class="dim link light-silver" href="/documentation/">Docs</a>
+                </li>
+                <li class="f5 dib mr4" role="menuitem">
+                    <a href="https://themes.gohugo.io/" class="dim link light-silver">Themes</a>
+                </li>
+                <li class="f5 dib mr4" role="menuitem">
+                  <a href="/showcase/" class="dim link light-silver">ShowCase</a>
+              </li>
+                 <li class="f5 dib mr4" role="menuitem"> 
+                    <a href="https://discourse.gohugo.io" class="dim link light-silver">Community
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="10" 
+                         viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link">
+                         <path d="M25.152 16.576v5.696q0 2.144-1.504 3.648T20 27.424h-14.848q-2.144.0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q.224.0.384.16t.16.416v1.152q0 .256-.16.416t-.384.16h-12.576q-1.184.0-2.016.832t-.864 2.016v14.848q0 1.184.864 2.016t2.016.864H20q1.184.0 2.016-.864t.832-2.016v-5.696q0-.256.16-.416t.416-.16h1.152q.256.0.416.16t.16.416zM32 1.152v9.12q0 .48-.352.8t-.8.352-.8-.352l-3.136-3.136-11.648 11.648q-.16.192-.416.192t-.384-.192l-2.048-2.048q-.192-.16-.192-.384t.192-.416l11.648-11.648-3.136-3.136q-.352-.352-.352-.8t.352-.8.8-.352h9.12q.48.0.8.352t.352.8z">
+                        </path></svg>
+                      </span>
+                    </a> 
+                </li>
+                
+                <li class="f5 dib mr4" role="menuitem"> 
+                  <a href="https://github.com/gohugo.io/hugo" class="dim link light-silver">Github
+                    
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                       xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="10" 
+                       viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link">
+                       <path d="M25.152 16.576v5.696q0 2.144-1.504 3.648T20 27.424h-14.848q-2.144.0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q.224.0.384.16t.16.416v1.152q0 .256-.16.416t-.384.16h-12.576q-1.184.0-2.016.832t-.864 2.016v14.848q0 1.184.864 2.016t2.016.864H20q1.184.0 2.016-.864t.832-2.016v-5.696q0-.256.16-.416t.416-.16h1.152q.256.0.416.16t.16.416zM32 1.152v9.12q0 .48-.352.8t-.8.352-.8-.352l-3.136-3.136-11.648 11.648q-.16.192-.416.192t-.384-.192l-2.048-2.048q-.192-.16-.192-.384t.192-.416l11.648-11.648-3.136-3.136q-.352-.352-.352-.8t.352-.8.8-.352h9.12q.48.0.8.352t.352.8z">
+                      </path></svg>
+                    </span>
+                  </a> 
+              </li>   
+              </ul>
+              <div class="form-group">
+                <input class="form-control transparent-input" type='text' name='name' placeholder="Search the Docs">
+                <span class="fa fa-search form-control-feedback"></span>
+                </button>
+              </div>
+              <span class="absolute mt1 mt2-l pr3 right-0 top-0">
+                <a href="https://twitter.com/intent/follow?screen_name=GoHugoIO"
+                 title="Follow on Twitter" 
+                 class="link-transition twitter link dib z-999 pt3 pt0-l mr2">
+                 <svg height="32" id="Layer_1" 
+                 style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" 
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                 <path d="M37.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173.0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.568C19.775 43.256 19 43.341 19 43.405c0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.673 5.657-5 6.978-8.221.713-1.716 1.425-4.851 1.425-6.354.0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267.0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932C39.766 21.902 38.131 21.944 37.167 22.283zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" 
+                  style="fill-rule:evenodd;clip-rule:evenodd;">
+              </path></svg></a>
+              <div class="widget widget-lg">
+                <a class="btn" href="https://github.com/gohugoio/hugo" rel="noopener" target="_blank" aria-label="Star gohugoio/hugo on GitHub"><svg viewBox="0 0 16 16" width="16" height="16" class="octicon octicon-mark-github" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                 <span>Star</span></a></div>
+            </span>
+              
+    </section>
+    <header class="bg-primary-color-dark" role="banner">
+      <section class="center">
+        <div class="w-100 w-50-ns">
+          <img src="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" alt="Hugo Logo" class="image w-100">
+        </div>
+        <h2 class="f3 f1-l">The world’s fastest framework for building websites</h2>
+        <p class="pa2">Hugo is one of the most popular open-source static site generators.
+           With its amazing speed and flexibility,
+           Hugo makes building websites fun again.</p>
+           <div class="w4 mv4 center">
+             <a class="f5 db link grow bg-blue white  pv2" href="/getting-started/quick-start/">Quick Start</a>
+          </div>
+      </section>
+    </header>
+    <section class="relative w-100 bg-black white">
+           <div class="hover-notes">
+            <a href="/news/0.74.3-relnotes/"
+             class="link lh-copy light-gray f6 w-100 w-50-m w-25-l bg-animate hover-bg-accent-color hover-white pv3 pv4-ns ph3 ph4-ns dib">
+             <span class="f6 gray pb1 db">July 23, 2020<br></span>
+              This version fixes a couple of bugs<br> introduced in 0.74.0.</a>
+           </div>
+           <div class="link-fixe-none">
+            <a href="/news/0.74.3-relnotes/"
+             class="link lh-copy light-gray f6 w-100 w-50-m w-25-l bg-animate hover-bg-accent-color hover-white pv3 pv4-ns ph3 ph4-ns dib">
+             <span class="f6 gray pb1 db">July 23, 2020<br></span>
+              This version fixes a couple of bugs<br>
+              introduced in 0.74.0.</a>
+           </div>
+           <div class="rel-notes">
+            <a href="/news/0.74.3-relnotes/" 
+            class="link lh-copy light-gray bg-animate hover-bg-accent-color hover-white dib">
+            <span class="f6 gray pb1 db">July 23, 2020<br></span>
+              This version fixes a couple of bugs<br>
+               introduced in 0.74.0.</a>
+           </div>
+           <div class="relnotes">
+            <a href="/news/0.74.3-relnotes/"
+             class="link lh-copy light-gray  bg-animate hover-bg-accent-color hover-white dib">
+             <span class="f6 gray light-gray">July 13, 2020<br></span>
+              Hugo 0.74.0 brings blazingly fast<br> native JavaScript bundling,
+              <br> with minification, tree shaking, scope…</a>
+           </div>
+    </section>
+    
+    <section class="container mid-gray w-100">
+      <div class="row">
+        <div class="flex-auto w-100 pt1">
+          <img src="https://d33wubrfki0l68.cloudfront.net/a1faa97f0ce49535ed6ab38370b3c15261ac26da/a412a/images/icon-fast.svg" alt="icon depicting Blistering Speed" class="f3-gray  w-10">
+          <div class="flex-auto-ns w-80-ns">
+            <h3 class="title-gray o-80 f4">Blistering Speed</h3>
+            <div class="gray measure-wide mb0-l">
+              <p class="f3 primary-color mt0 mb2">What's modern about waiting for<br> your site to build?</p>
+              <div class="title-copy">Hugo is the fastest tool of its kind. At &lt;
+                1 ms per<br> page, the average site builds in less than a second.
+        </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="flex-auto1 w-100 pt1">
+          <img src="https://d33wubrfki0l68.cloudfront.net/ab129b8c07b5debe6a6c857e7fdadf27b3dbdb9b/2b421/images/icon-content-management.svg" alt="icon depicting Robust Content Management" class="f3-gray  w-10">
+          <div class="flex-auto-ns w-80-ns">
+            <h3 class="title-gray o-80 f4">Robust Content Management</h3>
+            <div class="gray measure-wide mb0-l">
+              <p class="f3 primary-color mt0 mb2">Flexibility rules.Hugo is a content<br> strategist's dream.</p>
+              <div class="title-copy">Hugo supports unlimited content types,taxonomies,
+                <br> menus,dynamics API-driven content ,and more,all<br> without plugins.
+        </div>
+        </div>
+      </div>
+        </div>
+      </div>
+</section>
+
+<section class="container mid-gray w-100">
+  <div class="row">
+    <div class="flex-auto w-100 pt1">
+      <img src="https://d33wubrfki0l68.cloudfront.net/9c86aaef3fda3552d1199628dbdb99dd0b44e716/93949/images/icon-shortcodes.svg" alt="icon depicting Shortcodes" class="h3-gray w-10">
+      <div class="flex-auto-ns w-80-ns">
+        <h3 class="title-gray o-80 f4">ShortCodes</h3>
+        <div class="gray measure-wide mb0-l">
+          <p class="f3 primary-color mt0 mb2">Hugo's shortcodes are Markdown's<br>hidden superpower.</p>
+          <div class="title-copy">We love the beautiful simplicity of markdown’s
+            <br>syntax, but there are times when we want more
+            <br>flexibility. Hugo shortcodes allow for both beauty
+            <br>and flexibility.
+    </div>
+    </div>
+  </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="flex-auto1 w-100 pt1">
+      <img src="https://d33wubrfki0l68.cloudfront.net/8daf7d8372c44a35105e9fab8e4d15c204b27812/05a4f/images/icon-built-in-templates.svg" alt="icon depicting Built-in Templates" class="h3-gray w-10">
+      <div class="flex-auto-ns w-80-ns">
+        <h3 class="title-gray o-80 f4">Built-in Templates</h3>
+        <div class="gray measure-wide mb0-l">
+          <p class="f3 primary-color mt0 mb2">Hugo has common patterns to get<br>your work done quickly.</p>
+          <div class="title-copy">Hugo ships with pre-made templates to make quick
+            <br>work of SEO, commenting, analytics and other<br>functions. One line of code, and you're done.
+    </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</section>
+
+<section class="container mid-gray w-100">
+  <div class="row">
+    <div class="flex-auto w-100 pt1">
+      <img src="https://d33wubrfki0l68.cloudfront.net/55c1b13e8de922619238d05b460c058d28a1c426/7f155/images/icon-multilingual2.svg" alt="icon depicting Multilingual and i18n" class="h3-gray w-10">
+      <div class="flex-auto-ns w-80-ns">
+        <h3 class="title-gray o-80 f4">Multilingual and i18n</h3>
+        <div class="gray measure-wide mb0-l">
+          <p class="f3 primary-color mt0 mb2">Polyglot baked in</p>
+          <div class="title-copy">Hugo provides full i18n support for multi-language
+            <br>sites with the same straightforward development
+            <br>experience Hugo users love in single-language sites.
+    </div>
+    </div>
+  </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="flex-auto1 w-100 pt1">
+      <img src="https://d33wubrfki0l68.cloudfront.net/7a1d3412c112aa4c5c602a76cc249a631a3a596b/9cfbd/images/icon-custom-outputs.svg" alt="icon depicting Custom Outputs" class="h3-gray w-10">
+      <div class="flex-auto-ns w-80-ns">
+        <h3 class="title-gray o-80 f4">Custom Outputs</h3>
+        <div class="gray measure-wide mb0-l">
+          <p class="f3 primary-color mt0 mb2">HTML not enough?</p>
+          <div class="title-copy">Hugo allows you to output your content in multiple
+            <br>formats, including JSON or AMP, and makes it easy<br>to create your own.
+
+    </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</section>
+    <section class="sponsor">
+      <div class="flex-wrap">
+        <h3 class="b-1 f3 light-gray">Hugo Sponsors</h3>
+      </div>  
+        <div class="flex-ns pt3">
+          <div class="ba-want  w-90 w-30-l o-100">
+            <a href="https://forestry.io/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" onclick="trackOutboundLink('Sponsor Forestry.io Home','https://forestry.io/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage');" class="grow">
+            <img src="https://d33wubrfki0l68.cloudfront.net/d5cead2d3e00dfe842cd4e018bd313cb00db5f2a/f865c/images/sponsors/forestry-logotype.svg" alt="Logo for Forestry.io" class="img h3 center"></a>
+          </div>
+
+            <div class="ba-want  w-90 w-30-l o-100">
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" onclick="trackOutboundLink('Sponsor Linode Home','https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage');" class="grow">
+              <img src="https://d33wubrfki0l68.cloudfront.net/cf2b736978bab96f087d25ce75672848c283aaaf/fb33e/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center"></a>
+            </div>
+
+              <div class="ba-want  w-90 w-30-l o-100">
+                <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" onclick="trackOutboundLink('Sponsor ESolia Home','https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage');" class="grow">
+                  <img src="https://d33wubrfki0l68.cloudfront.net/077f2ddbf452f3a327ec4b0d2bd0733f0f05202c/244b8/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center">
+        </a>
+      </div>
+      </div>
+    </section>
+
+    <section class="container-row w-80">
+      <div class="row-container w-80">
+        <div class="row-class flex-display-img">
+          <img src="https://d33wubrfki0l68.cloudfront.net/291588ca4ec28632c45707669f113eced92ea64d/f1a39/images/homepage-screenshot-hugo-themes.jpg" alt="image depicting an example of 300+ Themes" class="row-class w-80-ns shadow-5">
+        </div>
+      </div>
+      <div class="row-container-ns w-80 center tc">
+        <h3 class="f1 fw4 black ma0 pt4 lh-title pt0-l">300+ Themes</h3>
+        <p class="f3 lh-copy">Hugo provides a robust theming system that is easy to implement but capable of producing even the most complicated websites.</p>
+        <p class="f4 lh-copy nested-linksTK">
+          <a href="https://themes.gohugo.io/" class="link black dim">Check out the Hugo themes.
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link">
+              <path d="M25.152 16.576v5.696q0 2.144-1.504 3.648T20 27.424h-14.848q-2.144.0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q.224.0.384.16t.16.416v1.152q0 .256-.16.416t-.384.16h-12.576q-1.184.0-2.016.832t-.864 2.016v14.848q0 1.184.864 2.016t2.016.864H20q1.184.0 2.016-.864t.832-2.016v-5.696q0-.256.16-.416t.416-.16h1.152q.256.0.416.16t.16.416zM32 1.152v9.12q0 .48-.352.8t-.8.352-.8-.352l-3.136-3.136-11.648 11.648q-.16.192-.416.192t-.384-.192l-2.048-2.048q-.192-.16-.192-.384t.192-.416l11.648-11.648-3.136-3.136q-.352-.352-.352-.8t.352-.8.8-.352h9.12q.48.0.8.352t.352.8z">
+              </path>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </section>
+    <section class="container-side w-70">
+      <div class="w-80-ns center tc">
+        <h3 class="f1-fw4 black ma0 pt4 lh-title pt0-l">Capable Templating</h3>
+        <p class="f3-lh-copy">Hugo's Go-based templating provides just the right amount of logic to build anything from the simple to complex.</p>
+        <p class="f4 lh-copy ">
+          <a href="https://gohugo.io/templates/" class="link black dim">Get Started.
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link">
+            <path d="M25.152 16.576v5.696q0 2.144-1.504 3.648T20 27.424h-14.848q-2.144.0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q.224.0.384.16t.16.416v1.152q0 .256-.16.416t-.384.16h-12.576q-1.184.0-2.016.832t-.864 2.016v14.848q0 1.184.864 2.016t2.016.864H20q1.184.0 2.016-.864t.832-2.016v-5.696q0-.256.16-.416t.416-.16h1.152q.256.0.416.16t.16.416zM32 1.152v9.12q0 .48-.352.8t-.8.352-.8-.352l-3.136-3.136-11.648 11.648q-.16.192-.416.192t-.384-.192l-2.048-2.048q-.192-.16-.192-.384t.192-.416l11.648-11.648-3.136-3.136q-.352-.352-.352-.8t.352-.8.8-.352h9.12q.48.0.8.352t.352.8z">
+      </path>
+    </svg>
+  </a>
+</p>
+</div>
+<div class="w-90-ns center">
+  <img src="https://d33wubrfki0l68.cloudfront.net/554d18c052498f67c0b96d260078e37494753921/282a8/images/home-page-templating-example.png" alt="image depicting an example of Capable Templating" class="img shadow-5">
+</div>
+    </section>
+
+    <section class="bg-near-gray mid-gray">
+      <h3 class="black f1-fw4-h-title ">Showcase</h3>
+      <div class="w-101 flex-display-wrap">
+        <div class="w-101 overflow-x-scroll">
+          <div class="row-display nowrap mv2 pb1">
+            <a href="/showcase/digitalgov/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style=" width:500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/b5bde43f6eff1e941b49a047bbaf951306ddee74/b9258/showcase/digitalgov/featured.png&quot;);"
+             data-sizes="auto">
+             <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+               <!-- <div class="absolute bottom-0 pa2 tc white">Digital.gov →
+               </div> -->
+              </div>
+            </a>
+            <a href="/showcase/pace-revenue-management/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style="width: 512px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/186953ee68011d3564ad21b5f537424a542d6423/83d29/showcase/pace-revenue-management/featured.png&quot;);" >
+        <a href="/showcase/over/" class="tile cover dib-ns-1 f4 h5 ml1 mr4  position-relative mw-100 shadow-5 lazyloaded" style="width: 500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/62a6dd5c9f117dc6bee50b280ea22faea5ac1323/2588b/showcase/over/featured-over.png&quot;);">
+          <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+            <!-- <div class="absolute bottom-0 pa2 tc white">Over →</div> -->
+          </div>
+          
+        </a>
+        <a href="/showcase/quiply-employee-communications-app/" class="tile cover dib-ns-1 f4 h5 ml1 mr4 bg-black-gray position-relative mw-100 shadow-5 lazyloaded" style="width: 512px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/918e3f3716b40cf8f929c8bd26ff183a5fc6d8b6/9a763/showcase/quiply-employee-communications-app/featured.png&quot;);">
+            <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+              <!-- <div class="absolute bottom-0 pa2 tc white">Quiply Employee Communications App →</div> -->
+            </div>
+          </a>
+          <a href="/showcase/1password-support/" class="tile cover dib-ns f4 h5 ml1 mr4 position-relative mw-100 shadow-5 lazyloaded" style="width: 500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/9de81ebb1c229c8cbff0607eca22812a7ba7b3d5/64b8c/showcase/1password-support/featured.png&quot;);" data-bg="https://d33wubrfki0l68.cloudfront.net/9de81ebb1c229c8cbff0607eca22812a7ba7b3d5/64b8c/showcase/1password-support/featured.png" data-sizes="auto" data-srcset="https://d33wubrfki0l68.cloudfront.net/8a20ec82422979801273fca10db60b41899d7783/23027/showcase/1password-support/featured_hu870838c23243880857c2e418dd7ac099_165718_8714c8c914d32c12c7eb833a42713319.png 1x,
+          https://d33wubrfki0l68.cloudfront.net/7f0301dac1769ec5ddd53d20256e974aa7db4ccd/6f1d0/showcase/1password-support/featured_hu870838c23243880857c2e418dd7ac099_165718_1024x512_fill_catmullrom_top_2.png 2x">
+           <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+            <!-- <div class="absolute bottom-0 pa2 tc white">1Password Support →</div> -->
+          </div>
+        </a>
+        
+        
+          </a>
+          <a href="/showcase/keycdn/" class="tile cover dib-ns h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" style="width: 512px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/47d1c3bb586a01c2b7b66d4b0d7827dbad74fe07/48414/showcase/keycdn/featured.png&quot;);" >
+            <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+              <!-- <div class="absolute bottom-0 pa2 tc white">KeyCDN →</div> -->
+            </div>
+          </a>
+          <a href="/showcase/digitalgov/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style=" width:500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/b5bde43f6eff1e941b49a047bbaf951306ddee74/b9258/showcase/digitalgov/featured.png&quot;);"
+             data-sizes="auto">
+             <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+               <!-- <div class="absolute bottom-0 pa2 tc white">Digital.gov →
+               </div> -->
+              </div>
+            </a><a href="/showcase/digitalgov/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style=" width:500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/b5bde43f6eff1e941b49a047bbaf951306ddee74/b9258/showcase/digitalgov/featured.png&quot;);"
+             data-sizes="auto">
+             <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+               <!-- <div class="absolute bottom-0 pa2 tc white">Digital.gov →
+               </div> -->
+              </div>
+            </a>
+            <a href="/showcase/digitalgov/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style=" width:500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/b5bde43f6eff1e941b49a047bbaf951306ddee74/b9258/showcase/digitalgov/featured.png&quot;);"
+             data-sizes="auto">
+             <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+               <!-- <div class="absolute bottom-0 pa2 tc white">Digital.gov →
+               </div> -->
+              </div>
+            </a>
+            <a href="/showcase/digitalgov/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style=" width:500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/b5bde43f6eff1e941b49a047bbaf951306ddee74/b9258/showcase/digitalgov/featured.png&quot;);"
+             data-sizes="auto">
+             <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+               <!-- <div class="absolute bottom-0 pa2 tc white">Digital.gov →
+               </div> -->
+              </div>
+            </a>
+            <a href="/showcase/digitalgov/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style=" width:500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/b5bde43f6eff1e941b49a047bbaf951306ddee74/b9258/showcase/digitalgov/featured.png&quot;);"
+             data-sizes="auto">
+             <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+               <!-- <div class="absolute bottom-0 pa2 tc white">Digital.gov →
+               </div> -->
+              </div>
+            </a>
+            <a href="/showcase/digitalgov/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style=" width:500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/b5bde43f6eff1e941b49a047bbaf951306ddee74/b9258/showcase/digitalgov/featured.png&quot;);"
+             data-sizes="auto">
+             <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+               <!-- <div class="absolute bottom-0 pa2 tc white">Digital.gov →
+               </div> -->
+              </div>
+            </a>
+            <a href="/showcase/digitalgov/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style=" width:500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/b5bde43f6eff1e941b49a047bbaf951306ddee74/b9258/showcase/digitalgov/featured.png&quot;);"
+             data-sizes="auto">
+             <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+               <!-- <div class="absolute bottom-0 pa2 tc white">Digital.gov →
+               </div> -->
+              </div>
+            </a>
+            <a href="/showcase/digitalgov/" class="tile cover dib-ns f4 h5 ml1 mr4 bg-black-color position-relative mw-100 shadow-5 lazyloaded" 
+            style=" width:500px; background-image: url(&quot;https://d33wubrfki0l68.cloudfront.net/b5bde43f6eff1e941b49a047bbaf951306ddee74/b9258/showcase/digitalgov/featured.png&quot;);"
+             data-sizes="auto">
+             <div class="details absolute bottom-0 f3-ns f4 left-0 o-0 right-0 top-0">
+               <!-- <div class="absolute bottom-0 pa2 tc white">Digital.gov →
+               </div> -->
+              </div>
+            </a>
+          
+        </div>
+        
+        </div>
+    </section>
+    
+
+    <div class="flex-display-see w-5 mt4 justify-end">
+      <a href="/showcase/" class="br22 f6  hover-bg-color ttu-white">SEE ALL</a></div>
+
+  <section class="display-flex-ak w-100 ">
+    <div class="display-flex-wrap ph4 ml-20">
+      <div class="w-100 w-50-ns">
+        <div class="w-30 center tc-ns nested-copy-line-height">
+        <h3 class="f1 black">Install in seconds, build in milliseconds.</h3>
+        <p class="f3 title-copy">Hugo works on macOS, Windows, Linux, FreeBSD, and others.</p>
+        <p class="f3 title-copy">Host on any server or your favorite CDN.</p>
+      </div>
+      
+      <div class="display-flex-img">
+        <img src="https://d33wubrfki0l68.cloudfront.net/d7c79b5c53384a57cfcf5bfb1a3f6f009a058b0b/16f81/images/gopher-hero.svg" alt="Hugo Gopher" class="display-flex-img">
+        <p class="f6-ns title-copy">Mac OS</p>
+        <div class="code-ns f6 bg-black light-green  w-100">$ brew install hugo<br>
+        </div>
+          <p class="f6-ns title-copy">Windows</p>
+          <div class="code-ns f6 bg-black light-green  w-100 ">$ choco install hugo -confirm<br></div>
+          <p class="f6-ns title-copy">Linux</p>
+          <div class="code-ns f6 bg-black light-green title-copy w-100">$ snap install hugo<br></div>
+          <div class="nun-links">
+            <p class="font5 nun-links">
+              <a href="https://gohugo.io/getting-started/installing/" class="link-f5">See the Getting Started Guide for other methods.
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link">
+                <path d="M25.152 16.576v5.696q0 2.144-1.504 3.648T20 27.424h-14.848q-2.144.0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q.224.0.384.16t.16.416v1.152q0 .256-.16.416t-.384.16h-12.576q-1.184.0-2.016.832t-.864 2.016v14.848q0 1.184.864 2.016t2.016.864H20q1.184.0 2.016-.864t.832-2.016v-5.696q0-.256.16-.416t.416-.16h1.152q.256.0.416.16t.16.416zM32 1.152v9.12q0 .48-.352.8t-.8.352-.8-.352l-3.136-3.136-11.648 11.648q-.16.192-.416.192t-.384-.192l-2.048-2.048q-.192-.16-.192-.384t.192-.416l11.648-11.648-3.136-3.136q-.352-.352-.352-.8t.352-.8.8-.352h9.12q.48.0.8.352t.352.8z"></path>
+              </svg>
+              </a>
+              </p>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section class="w-100 bg-accent-color">
+    <div class="flex-again wrap-flex">
+      <h3 class="f2-ns  white-needed">See what others are saying about Hugo…</h3>
+      <div class="flex-ns flex-wrap justify-between">
+        <div class="homepage-tweet flex-auto-1 w-40-l  bg-white-color  nested-copy-line-height br1 shadow-5">
+          <div class="absolute-1 top-0 left-0 ma2 o-10">
+            <svgid="layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewbox="0 0 67 67" width="" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" 
+            style="fill-rule:evenodd;clip-rule:evenodd;fill:current;">
+          </path>
+        </svgid="layer_1">
+      </div>
+      <blockquote class="ml-ns  title-copy bg-color-white">
+        <p class="f4-text">Working with @GoHugoIO is such a joy. Having worked with #Jekyll in the past, the near instant preview is a big win! Did not expect this to make such a huge difference.</p>
+              <cite class="homepage-tweet-attribution gray f6">
+              ─ Heinrich Hartmann (@heinrichhartman)
+               <a href="https://twitter.com/heinrichhartman/status/1199736512264462341">
+                November 12, 2019
+              </a>
+        </cite>
+      </blockquote>
+      <blockquote class="ml-ns-1 title-copy bg-color-white">
+        <p class="f4-text">Can't overstate how much I enjoy @GoHugoIO. My site is relatively small, but *18 ms* to build the whole thing made template development and proofing a breeze.</p>
+              <cite class="homepage-tweet-attribution gray f6">
+                ─ Joshua Steven‏‏ (@jscarto) 
+                <a href="https://twitter.com/jscarto/status/1039648827815485440">September 12, 2018</a>
+        </cite>
+      </blockquote>
+       
+  </section>
+  <section class="display-flex-next">
+    <div class="display-next  title-copy bg-color-white">
+      <p class="f4-text">Hugo is really, really incredible... Now does resizing/resampling of images as well! Crazy that something so fast can be a static site generator... Amazing open-source project.</p>
+      ─ Jens Munch (@jensamunch) 
+      <a href="https://twitter.com/jensamunch/status/948533063537086464">January 3, 2018</a>
+    </cite>
+    </blockquote>
+    </div>
+</div>
+
+<div class="display-next-1  title-copy bg-color-white">
+  <p class="f4-text">I fear @GoHugoIO v0.22 might be so fast it creates a code vortex that time-warps me back to a time I used Wordpress. #gasp</p>
+  ─ STOQE (@STOQE)
+  <a href="https://twitter.com/STOQE/status/874184881701494784">June 12, 2017</a>
+</cite>
+</blockquote>
+</div>
+</div>
+  </section>
+ <section class="w-100 flex-display-all bg-white-needed space-between">
+  <div class="third-margin-move">
+    <h3 class="f3 mv3 accent-color-light">We welcome all contributions
+    </h3>
+    <ul class="list ma0 pa0">
+      <li class="mb3">
+        <a href="https://github.com/gohugoio/hugo/blob/master/CONTRIBUTING.md" class="title-copy">
+          Fork the repo and work on an issue
+          <svg xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link"><path d="M25.152 16.576v5.696q0 2.144-1.504 3.648T20 27.424h-14.848q-2.144.0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q.224.0.384.16t.16.416v1.152q0 .256-.16.416t-.384.16h-12.576q-1.184.0-2.016.832t-.864 2.016v14.848q0 1.184.864 2.016t2.016.864H20q1.184.0 2.016-.864t.832-2.016v-5.696q0-.256.16-.416t.416-.16h1.152q.256.0.416.16t.16.416zM32 1.152v9.12q0 .48-.352.8t-.8.352-.8-.352l-3.136-3.136-11.648 11.648q-.16.192-.416.192t-.384-.192l-2.048-2.048q-.192-.16-.192-.384t.192-.416l11.648-11.648-3.136-3.136q-.352-.352-.352-.8t.352-.8.8-.352h9.12q.48.0.8.352t.352.8z">
+           </path>
+          </svg>
+        </a>
+      </li>
+      <li class="mb3">
+        <a href="https://themes.gohugo.io/" class="title-copy">Design a theme
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link"><path d="M25.152 16.576v5.696q0 2.144-1.504 3.648T20 27.424h-14.848q-2.144.0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q.224.0.384.16t.16.416v1.152q0 .256-.16.416t-.384.16h-12.576q-1.184.0-2.016.832t-.864 2.016v14.848q0 1.184.864 2.016t2.016.864H20q1.184.0 2.016-.864t.832-2.016v-5.696q0-.256.16-.416t.416-.16h1.152q.256.0.416.16t.16.416zM32 1.152v9.12q0 .48-.352.8t-.8.352-.8-.352l-3.136-3.136-11.648 11.648q-.16.192-.416.192t-.384-.192l-2.048-2.048q-.192-.16-.192-.384t.192-.416l11.648-11.648-3.136-3.136q-.352-.352-.352-.8t.352-.8.8-.352h9.12q.48.0.8.352t.352.8z">
+  </path>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+<div class="img-w display-image">
+  <img src="https://d33wubrfki0l68.cloudfront.net/a64bd0d3f81aca9dfaea96c8e6f9aa4422288b92/4f086/images/github-mark-64px.png" alt="Github Logo" class="tc-ns-1 center">
+</div>
+<div class="mb3 text-display">
+  <p class="title-copy  text-display-now">Hugo is open-source and completely free.</p>
+  <p class="title-copy  text-display-now">Our hundreds of contributors make Hugo great.</p>
+</div>
+<div class="third-margin-move">
+  <h3 class="f3 mv3 accent-color-light">More Ways To Contribute
+  </h3>
+  <ul class="list ma0 pa0">
+    <li class="mb3">
+      <a href="https://github.com/gohugoio/hugo/blob/master/CONTRIBUTING.md" class="title-copy">
+        Help improve the docs
+        <svg xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link"><path d="M25.152 16.576v5.696q0 2.144-1.504 3.648T20 27.424h-14.848q-2.144.0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q.224.0.384.16t.16.416v1.152q0 .256-.16.416t-.384.16h-12.576q-1.184.0-2.016.832t-.864 2.016v14.848q0 1.184.864 2.016t2.016.864H20q1.184.0 2.016-.864t.832-2.016v-5.696q0-.256.16-.416t.416-.16h1.152q.256.0.416.16t.16.416zM32 1.152v9.12q0 .48-.352.8t-.8.352-.8-.352l-3.136-3.136-11.648 11.648q-.16.192-.416.192t-.384-.192l-2.048-2.048q-.192-.16-.192-.384t.192-.416l11.648-11.648-3.136-3.136q-.352-.352-.352-.8t.352-.8.8-.352h9.12q.48.0.8.352t.352.8z">
+         </path>
+        </svg>
+      </a>
+    </li>
+    <li class="mb3">
+      <a href="https://themes.gohugo.io/" class="title-copy">Help others in forums
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link"><path d="M25.152 16.576v5.696q0 2.144-1.504 3.648T20 27.424h-14.848q-2.144.0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q.224.0.384.16t.16.416v1.152q0 .256-.16.416t-.384.16h-12.576q-1.184.0-2.016.832t-.864 2.016v14.848q0 1.184.864 2.016t2.016.864H20q1.184.0 2.016-.864t.832-2.016v-5.696q0-.256.16-.416t.416-.16h1.152q.256.0.416.16t.16.416zM32 1.152v9.12q0 .48-.352.8t-.8.352-.8-.352l-3.136-3.136-11.648 11.648q-.16.192-.416.192t-.384-.192l-2.048-2.048q-.192-.16-.192-.384t.192-.416l11.648-11.648-3.136-3.136q-.352-.352-.352-.8t.352-.8.8-.352h9.12q.48.0.8.352t.352.8z">
+</path>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+ </section>
+
+ <footer class="container-fluid bg-primary-color-dark  w-100" role="contentinfo">
+   <div class="text-between mw9">
+   <div class="pb3 pt4 w-100 w-50-ns">
+     <div class="b f3 light-gray tc">By the
+        <a href="https://github.com/gohugoio/hugo/graphs/contributors" class="link-blue">Hugo Authors</a>
+        <br>
+      </div>
+      <div class="row-fluid w4">
+        <img src="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" alt="Hugo Logo"></div><ul class="center f6 list ma0 mv3 pa0 tc">
+          <ul class="dib-mr3">
+          <li class="">
+            <a href="https://github.com/gohugoio/hugo/issues/new" class="dim-link light-gray pv2">File an Issue
+            </a>
+          </li>
+          <li class="">
+            <a href="https://discourse.gohugo.io/" class="dim-link light-gray pv2">Get Help</a>
+          </li>
+          <li class="">
+            <a href="https://gitter.im/spf13/hugo" class="dim-link light-gray pv2">Discuss Source Code</a>
+          </li>
+         </ul>
+        <ul class="dib-mr3">
+          <li class="">
+            <a href="https://twitter.com/gohugoio" class="dim-link light-gray pv2">@GoHugoIO</a>
+          </li>
+          <li><a href="https://twitter.com/spf13" class="dim-link light-gray pv2">@spf13</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/bepsays" class="dim-link light-gray pv2">@bepsays</a>
+        </li>
+      </ul>
+    <div class="m-top">
+      <a href="https://www.netlify.com">
+        <img src="https://d33wubrfki0l68.cloudfront.net/84dd209c6542675beba1668d6602478fd10329fc/2f507/images/netlify-dark.svg" alt="Netlify badge">
+      </a>
+    </div>
+      </div>
+        <!-- <div class="w-100 w-50-l">&nbsp;  -->
+    <section class=" w-100">
+              <div class="vic-space-out">
+                &nbsp;
+                <h3 class="b-f3-mv0 light-gray">
+                  Hugo Sponsors</h3>
+                  <div class="flex-ns flex-wrap center justify-between pt3">
+                    <div class="vic-flex">
+                      <a href="https://forestry.io/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" onclick="trackOutboundLink('Sponsor Forestry.io Footer','https://forestry.io/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage');" class="grow">
+            <img src="https://d33wubrfki0l68.cloudfront.net/d5cead2d3e00dfe842cd4e018bd313cb00db5f2a/f865c/images/sponsors/forestry-logotype.svg" alt="Logo for Forestry.io" class="img-h3 center">
+          </a>
+        </div>
+        <div class="vic-flex">
+          <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" onclick="trackOutboundLink('Sponsor Linode Footer','https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage');" class="grow">
+            <img src="https://d33wubrfki0l68.cloudfront.net/cf2b736978bab96f087d25ce75672848c283aaaf/fb33e/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img-h3 center">
+            </a>
+          </div>
+          <div class="vic-flex"><a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" onclick="trackOutboundLink('Sponsor ESolia Footer','https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage');" class="grow">
+            <img src="https://d33wubrfki0l68.cloudfront.net/077f2ddbf452f3a327ec4b0d2bd0733f0f05202c/244b8/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img-h3 center"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="f7 gray w-100">&nbsp;
+  <p>The Hugo logos are copyright © Steve Francia 2013–2020.</p>
+  <p>The Hugo Gopher is based on an original work by Renée French.</p>
+          </div>
+          <div class="server-img">
+          <img src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt="" class="server-img right-0 z-999">
+          </div>
+ </footer>
+          
+</body>
+</html>
